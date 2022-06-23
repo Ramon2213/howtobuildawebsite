@@ -38,7 +38,7 @@ p {
     position: relative
 }
 #table{
-    position: absolute;
+    position: fixed;
     left: 1210px;
     bottom: 574px;
     display: inline-block;
