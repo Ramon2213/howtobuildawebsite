@@ -39,8 +39,7 @@ p {
 }
 #table{
     position: fixed;
-    left: 1210px;
-    bottom: 700px;
+
     display: inline-block;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
