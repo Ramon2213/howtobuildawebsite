@@ -8,6 +8,17 @@ body {
 .code {
     color: rgb(174, 168, 168);
     font-family: "Segoe UI",Arial,sans-serif;
+    background-color: rgb(97, 97, 131);
+    display: block;
+    border-radius: 2px;
+}
+.codeinsentence {
+    color: rgb(174, 168, 168);
+    font-family: "Segoe UI",Arial,sans-serif;
+    background-color: rgb(97, 97, 131);
+    border-radius: 2px;
+
+
 }
 
 h1, h2, h3 {
@@ -22,10 +33,9 @@ p {
 
 .paragraph {
     width: 1150px;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 0px 28px 10px 10px;
-    
 }
 #table{
     position: absolute;
