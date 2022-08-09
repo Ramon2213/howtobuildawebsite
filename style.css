@@ -1,20 +1,55 @@
 body {
-    
+    cursor:url(cur847.png) 1 1, auto;   
 
     background-color: lightblue;
+
    
 }
 
-.code {
-    color: rgb(174, 168, 168);
+
+.navigation{
+
+
+    position: sticky;
+    bottom: 248px;
+    left: 1208px;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px 30px 10px 0px;
+    margin: 0px -300px;
     font-family: "Segoe UI",Arial,sans-serif;
-    background-color: rgb(97, 97, 131);
-    display: block;
-    border-radius: 2px;
+    height:400px;
+    width:250px;
+    display: flex;
+    flex-flow: column;
+    
+
+    
 }
-.codegrey {
-    color: rgb(174, 168, 168);
-    font-family: "Segoe UI",Arial,sans-serif;
+
+#container {
+    display: flex;
+    flex-flow: column;
+
+
+    
+
+}
+a {
+    text-decoration: none;
+
+}
+a:hover {
+    cursor:url(cur864.png) 1 1, auto; 
+
+
+}
+
+
+img:hover {
+    cursor:url(cur864.png) 1 1, auto;
+
 
 
 
@@ -23,10 +58,56 @@ body {
 h1, h2, h3 {
     font-family: "Segoe UI",Arial,sans-serif;
     font-weight: 400;
-
 }
 
 p {
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+#screenshotlogo {
+    height: 220px;
+}
+code { 
+    color: rgb(174, 168, 168);
+    display: block;
+    border-radius: 2px;
+    border: 2px;
+    padding: 4px;
+}
+
+tbody td {
+    border: 1px solid rgba(0, 0, 0, 0);
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 450;
+    font-size: 13px;
+    background-color: rgb(202, 241, 241);
+  }
+
+thead td {
+    border: 1px solid rgba(0, 0, 0, 0);
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-size: 13px;
+    background-color: rgba(122, 178, 252, 0.784);
+    font-weight: 400;
+    padding: 20px;   
+}
+td {
+    display: table-cell;
+    border: 1px solid rgba(0, 0, 0, 0);
+    vertical-align: inherit;
+}  
+#thead {
+    text-align: center;
+}
+table {
+    overflow-y: scroll;
+    position: static;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+
+.grey {
+    color: rgb(174, 168, 168);
     font-family: "Segoe UI",Arial,sans-serif;
 }
 
@@ -35,39 +116,217 @@ p {
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 0px 28px 10px 10px;
-    position: fixed;
-}
-#table{
-    position: fixed;
-    top: 85px; 
-    left: 1200px;  
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    padding: 10px 30px 10px 0px;
-    font-family: "Segoe UI",Arial,sans-serif;
+}  
 
-    
+#borderradius {
+    height: 230px;
+
 }
-#matrix{
-    position: absolute;
+
+
+li{
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+#paragraphbackground {
+    height: 180px;
+}
+
+#stylecolor{
+    height: 160px;
+}
+#logo{
+
+    position:absolute;
     top: 25px;
-    left: 350px;
+    left: 345px;
     max-width: 800;
     max-height: 40px;
     border-radius: 10px;
+    animation: rotation 8s infinite linear;
 }
 
-tbody td {
-    border: 1px solid black;
-    font-family: "Segoe UI",Arial,sans-serif;
-    font-weight: 450;
-    font-size: 13px;
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
   }
-thead td {
-    border: 1px solid black;
-    font-family: "Segoe UI",Arial,sans-serif;
-    font-weight: bold;
-    font-size: 13px;
-    background-color: rgba(0, 110, 255, 0.784);
+  to {
+    transform: rotate(359deg);
+  }
 }
+
+#boxmodel{
+    
+    /* height: 3 15px; */
+    border: 1px solid rgb(0, 0, 0);
+
+}
+#comparestyle {
+    height: 180px;
+}
+#styling {
+    height: 180px;
+}
+#site_title_image{
+    position:absolute;
+    top: 1078px;
+    left: 977px;
+    height: 115px;
+    border: 1px solid rgb(0, 0, 0);
+}
+#webpage1{
+    position:absolute;
+    top: 2270px;
+    left: 882px;    
+    height: 130px;
+    border: 1px solid rgb(0, 0, 0);
+
+}
+.smalltext{
+    font-size: 10px;
+}
+
+.red {
+    color: rgb(224, 5, 5);
+    font-family: sans-serif;
+    font-size: 12px;
+    
+}
+.info{
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.pagebuttons {
+    display: block;
+    position: absolute;
+    border: 1px solid black'
+
+}
+.greybutton {
+    border: 2px solid #848484;
+    border-radius: 5px;
+    color: #b9b9b9;
+    background-color: #747474;
+    padding:8px;
+    font-family: "Segoe UI",Arial,sans-serif;
+    display: inline-block;
+    box-shadow: -3px 3px rgb(0, 0, 0), -2px 2px rgb(0, 0, 0), -1px 1px rgb(0, 0, 0);
+}
+.button {
+    border: 2px solid #466995;
+    border-radius: 5px;
+    color: #61bff9;
+    background-color: #466995;
+    padding:8px;
+    font-family: "Segoe UI",Arial,sans-serif;
+    display: inline-block;
+    box-shadow: -3px 3px rgb(0, 0, 0), -2px 2px rgb(0, 0, 0), -1px 1px rgb(0, 0, 0);
+  }
+.button:active {
+    background-color:#ffffff;
+    color: #3c91b2;
+
+    box-shadow: 0 0 0 rgb(0, 0, 0);
+    margin: 3px 3px 0px 0px;
+}
+.button:hover {
+    background-color: #C0D6DF;
+  }
+
+.navlink:hover {
+    text-decoration: underline;
+    color:rgb(84, 201, 205)
+
+}
+
+.css {
+    background-color: rgb(97, 97, 131);
+}
+
+.html {
+    background-color: rgb(56, 56, 56);
+}
+.currentpage {
+    
+    color: rgba(128, 128, 128, 0.511);
+}
+
+    
+    
+.breadcrumblist > li {
+    display: inline;
   
+  }
+  
+  .breadcrumblist li+li::before {
+      padding: 10px;
+      content: ">";
+  }
+  
+  
+.breadcrumblist a {
+      text-decoration: none;
+  }
+  
+        
+.breadcrumblistred a:hover{
+    color:red;
+  }
+.breadcrumblistred > li {
+    display: inline;
+  
+  }
+  
+.breadcrumblistred li+li::before {
+      padding: 10px;
+      content: ">";
+  }
+  
+  
+.breadcrumblistred a {
+      text-decoration: none;
+  }
+
+
+
+.breadcrumbmix a {
+    text-decoration: none;
+}
+
+.breadcrumbmix li{
+display: inline;
+
+}
+
+.breadcrumbmix li.location+li.location::before {
+  content: "> ";
+}
+
+.breadcrumbmix li.attribute::after {
+  content: "x";
+  color: red;
+  font-size: 10px;
+  vertical-align: super;
+}
+.breadcrumbmix li.attribute a{
+  color:gray;
+}
+.breadcrumbmix li.location a{
+    color:black;
+  }
+
+.breadcrumbmix a:hover {
+  color: red;
+}
+
+  
+#semantic {
+    height:200px;
+}
+
+#workingsemantic {
+    border: 2px solid #000000;
+    padding: 10px;
+}   
