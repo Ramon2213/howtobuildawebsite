@@ -144,8 +144,8 @@ li{
     z-index: 3;
     width: 230px;
     height: 180px;
-    left: -150px;
-    top: -30px;
+    left: -160px;
+    top: -40px;
     position:absolute;
     animation: cowmove 9s linear;
 }
