@@ -141,6 +141,7 @@ li{
 }
 
 #shyguy{
+    z-index: 1;
     width: 230px;
     height: 160px;
     left: -100px;
@@ -154,7 +155,7 @@ li{
     to{transform: translateX(1500px);}
 }
 #logo{
-
+    z-index: 1;
     position:absolute;
     top: 25px;
     left: 345px;
