@@ -141,8 +141,8 @@ li{
 }
 
 #shyguy{
-    max-width: 800px;
-    max-height: 40px;
+    width: 1000px;
+    height: 710px;
     left: -100px;
     position:absolute;
     animation: cowmove 7s linear;
