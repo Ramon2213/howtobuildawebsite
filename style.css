@@ -144,7 +144,7 @@ li{
     width: 230px;
     height: 160px;
     left: -100px;
-    top: -10px;
+    top: -20px;
     position:absolute;
     animation: cowmove 9s linear;
 }
