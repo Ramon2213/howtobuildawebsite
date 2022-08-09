@@ -145,7 +145,7 @@ li{
     max-height: 40px;
     left: -100px;
     position:absolute;
-    animation: cowmove 2s linear;
+    animation: cowmove 5s linear;
 }
 
 @keyframes cowmove{
