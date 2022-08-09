@@ -141,11 +141,11 @@ li{
 }
 
 #shyguy{
-    z-index: 1;
+    z-index: 3;
     width: 230px;
     height: 160px;
     left: -100px;
-    top: -25px;
+    top: -30px;
     position:absolute;
     animation: cowmove 9s linear;
 }
