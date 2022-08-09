@@ -11,8 +11,8 @@ body {
 
 
     position: sticky;
-    bottom: 10%;
-    left: 80%;
+    bottom: 35%;
+    left: 79%;
 
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
@@ -21,15 +21,14 @@ body {
     font-family: "Segoe UI",Arial,sans-serif;
     height:400px;
     width:250px;
-    display: flex;
-    flex-flow: column;
+
     
 
     
 }
 
 #container {
-    display: inline-flex;
+    display: flex;
     flex-flow: column;
     
 
@@ -113,7 +112,7 @@ table {
 }
 
 .paragraph {
-    width: 1150px;
+    width: 76%;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 0px 28px 10px 10px;
