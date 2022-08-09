@@ -2,6 +2,9 @@ body {
     cursor:url(cur847.png) 1 1, auto;   
 
     background-color: lightblue;
+    position: absolute;
+    height: 100%;
+
 
    
 }
@@ -9,18 +12,18 @@ body {
 
 .navigation{
 
+    
 
-    position: sticky;
-    bottom: 35%;
-    left: 79%;
 
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    padding: 10px 30px 10px 0px;
-    margin: 0px -300px;
+    padding: 10px 20px 10px 0px;
+    margin-left: 1%;
+    display: flex;
+    height: 10%;
+
     font-family: "Segoe UI",Arial,sans-serif;
-    height:400px;
-    width:250px;
+    
 
     
 
@@ -28,9 +31,10 @@ body {
 }
 
 #container {
-    display: flex;
-    flex-flow: column;
-    
+
+    justify-content: center;   
+    display: inline-flex;
+
 
 
     
@@ -168,16 +172,12 @@ li{
     height: 180px;
 }
 #site_title_image{
-    position:absolute;
-    top: 1078px;
-    left: 977px;
+
+
     height: 115px;
     border: 1px solid rgb(0, 0, 0);
 }
-#webpage1{
-    position:absolute;
-    top: 2270px;
-    left: 882px;    
+#webpage1{ 
     height: 130px;
     border: 1px solid rgb(0, 0, 0);
 
