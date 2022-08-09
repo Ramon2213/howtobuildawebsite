@@ -8,36 +8,167 @@
     <title>How to build a website</title>
 </head>
 <body>
-    <h1> How to build a website</h1>
-    <img id=matrix src="matrix.gif" />
+    <header>
+        <h1> How to build a website</h1>
+        <img id=logo src="color-theory-logo.svg"/>
+    </header>
+    <div id="container">
     <div class='paragraph'>
     <h2>Preparing your code for your website</h2>
     <p>Before you start writing your code you should write a declaration to let web browsers know that we are using HTML. The declaration should look like this: 
-    <br>
-    <br>
-    <span class="code">&lt;!DOCTYPE html&gt;</span>
-    <br>
     
+    <br>
+    <pre>
+        <code class="html">
+&lt;!DOCTYPE html&gt;
+        </code>
+    </pre>
+
     <p>The <!DOCTYPE html> declaration provides the browser with two pieces of information (the type of document and the HTML version to expect), but it doesn’t actually add any HTML structure or content.
-        To create HTML structure and content, we must add opening and closing &lt;html&gt; tags after declaring <span class="codegrey">&lt;!DOCTYPE html&gt;</span>:
+        To create HTML structure and content, we must add opening and closing <strong>&lt;html&gt;</strong> tags after declaring <span class="grey">&lt;!DOCTYPE html&gt;</span>
     </p>
-    <br>
-    <br>
-    <span class="code">
-    &lt;!DOCTYPE html&gt;
-    <br>
-    &lt;html&gt;
-    <br>
-    <br>
-    &lt;/html&gt;
-    </span>
+    <pre>
+        <code class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;/html&gt;
+        </code>
+    </pre>
+
+
+
+    <p>Now that we have declared we are using HTML code, we need a <strong>&lt;body&gt;</strong> element. Everything that is visible on a web page is written inside of this</p>
+ 
+    <pre>
+        <code class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </code>
+    </pre>
+
+    <p>To give the browser some information about the page itself you can add a <strong>&lt;head&gt;</strong> element. It goes above our <strong>&lt;body&gt;</strong> element. The <strong>&lt;head&gt;</strong> element contains the metadata for a web page. Metadata is information about the page that isn’t displayed directly on the web page. The opening and closing <strong>&lt;head&gt;</strong> tags typically appear as the first item after your first <strong>&lt;html&gt;</strong> tag:
+        </p>
+    <pre>
+        <code class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;   
+    &lt;body&gt;     
+    &lt;/body&gt;
+&lt;/html&gt;
+        </code>
+    </pre>
+
+    <p>What kind of metadata about the web page can the <strong>&lt;head&gt;</strong> element contain? <br> A browser’s tab displays the title specified in the <strong>&lt;title&gt;</strong> tag. The <strong>&lt;title&gt;</strong> tag is always inside of the <strong>&lt;head&gt;</strong>.</p>
+    <pre>
+        <code class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Coding Journal&lt;/title&gt;
+    &lt;/head&gt;   
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </code>
+    </pre>
+
+
+    <p>One of the most popular elements in HTML is the <strong>&lt;div&gt;</strong> element. <strong>&lt;div&gt;</strong> is short for “division”, a container that divides the page into sections. These sections are very useful for grouping elements in your HTML together.<strong>&lt;div&gt;</strong>s don’t inherently have a visual representation, but they are very useful when we want to apply custom styles to a group of elements. We can do this by giving the <strong>&lt;div&gt;</strong> an <strong>ID</strong> or <strong>Class</strong>. 
+    <br><br>A <strong>Class</strong> is like a blueprint and can be used multiple times and an <strong>ID</strong> is for single use. We can also style the <strong>&lt;div&gt;</strong> element as a whole. Styling will be done in a separate css file and there we can call/target them by their <strong>ID</strong>, <strong>Class</strong> name or <strong>Div</strong> as a whole. We will do this on the next page.<br><br></p>
+    <div id="workingsemantic">
+    <p>The following tags act just like a <strong>&lt;div&gt;:</strong> <br><br> <strong>&lt;header&gt; &lt;nav&gt; &lt;article&gt; &lt;figure&gt; &lt;footer&gt;</strong>.</p>
+    <p>Replacing all your <strong>&lt;div&gt;s</strong> with these tags is what we call working semantic, which is much easier to read than non-semantic </p>
+    <img id="semantic" src="semanticnonsemantic.png">
     </div>
-    <div id="table">
+    <p> We will now add a <strong>&lt;header&gt;</strong>(semantic) and a <strong>&lt;div&gt;</strong> with the class paragraph (non-semantic) to our <strong>&lt;body&gt;</strong> element. Remember that these tags act the same but one is easier to distinguish.</p>
+
+
+    <pre>
+        <code class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Coding Journal&lt;/title&gt;
+    &lt;/head&gt;   
+    &lt;body&gt;
+        &lt;header&gt;
+        &lt;/header&gt;
+        &lt;div class=paragraph&gt;
+        &lt;/div&gt;  
+    &lt;/body&gt;
+&lt;/html&gt;
+        </code>
+    </pre> 
+
+    <p> </p>
+
+    <p>Now that we have created 2 separate containers we can insert some content. For a heading inside our header we can choose between <strong>&lt;h1&gt;</strong> to <strong>&lt;h6&gt;</strong>. <br> <strong>&lt;h1&gt;</strong> is the highest section level and <strong>&lt;h6&gt;</strong> is the lowest. We will start with <strong>&lt;h1&gt;</strong> which is the largest size. <br>Inside the paragraph div we will add a paragraph with a piece of text. </p>
+
+    <pre>
+        <code class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Coding Journal&lt;/title&gt;
+    &lt;/head&gt;   
+    &lt;body&gt;
+        &lt;header&gt;
+            &lt;h1&gt; My first web page &lt;/h1&gt;
+        &lt;/header&gt;
+        &lt;div class=paragraph&gt;
+            &lt;p&gt;this is our first paragraph, here we can add large chunks of text.&lt;/p&gt;
+        &lt;/div&gt;  
+    &lt;/body&gt;
+&lt;/html&gt;
+        </code>
+    </pre> 
+    <img id="webpage1" src="webpage1.png" />
+
+
+    <p>Now are the first steps of your website prepared, on the next page we will start with styling our page. </p>
+    <br><br>    
+
+
+    <div class="pagebuttons">
+    <a class="greybutton">Previous Page</a>
+    <a class = button href="creating_css_file.html">Next Page</a>
+    </div>
+    <br><br><br>
+
+
+
+
+
+
+
+    <img id="site_title_image" src="site_title.png" />
+    </div>
+
+
+    <div class="navigation">
         <ol>
-            <li><a href="index.html">How to prepare your html code</a></li>
-            <li><a href="layout_tags.html">HTML layout tags</a></li>
+            <li><a class="currentpage" href=#> How to prepare your html code</a></li>
+            <li><a class="navlink" href="creating_css_file.html">Creating CSS file for styling</a></li>
+            <li><a class="navlink" href="stylingcss.html">Styling with CSS</a></li>
+            <li><a class="navlink" href="page_menu.html">Adding a page menu to your website</a></li>  
+            <li><a class="navlink" href="navigation_menu.html">Adding a navigation menu to your website</a></li>  
+            <li><a class="navlink" href="change_cursor.html">Change cursor</a></li>
         </ol>
+        <ul>
+            <li><a class="navlink" href="layout_tags.html">HTML layout tags</a></li>
+            <li><a class="navlink" href="css_selectors.html">CSS Selectors</a></li>
+            <li><a class="navlink" href="css_properties.html">Useful CSS properties</a></li>
+        </ul>
+
     </div>
+    </div>
+
+    
 
       
 </body>    
