@@ -1,11 +1,8 @@
 body {
     cursor:url(cur847.png) 1 1, auto;   
-
     background-color: lightblue;
-    position: absolute;
+
     height: 100%;
-
-
    
 }
 
@@ -22,14 +19,9 @@ body {
     justify-content: space-between;
     font-family: "Segoe UI",Arial,sans-serif;
     
-
-    
-
-    
 }
 
 #container {
-
     justify-content: center;   
     display: inline-flex;
 
@@ -139,21 +131,22 @@ li{
 }
 
 #shyguy{
- 
-    width: 230px;
-    height: 180px;
-    left: -180px;
-    top: -40px;
-    position:absolute;
-    animation: cowmove 9s linear;
+    max-width: 800px;
+    max-height: 40px;
+    left: -100px;
+    position: absolute;
+    animation: shyguymove 5s linear;
+    z-index: 3;
 }
 
-@keyframes cowmove{
+@keyframes shyguymove{
     from{transform: translateX(10px);}
     to{transform: translateX(1500px);}
 }
 #logo{
+
     z-index: 1;
+
     position:absolute;
     top: 25px;
     left: 345px;
