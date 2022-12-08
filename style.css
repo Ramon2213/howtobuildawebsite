@@ -1,8 +1,9 @@
 body {
     cursor:url(cur847.png) 1 1, auto;   
     background-color: lightblue;
-
     height: 100%;
+
+    
    
 }
 
@@ -26,6 +27,9 @@ body {
     display: inline-flex;
 
 
+
+
+    align-content: center;
 
     
 

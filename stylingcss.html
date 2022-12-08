@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to build a website</title>
+</head>
+<body>
+    <header>
+        <h1> How to build a website</h1>
+        <img id=logo src="color-theory-logo.svg"/>
+    </header>
+    <div class='paragraph'>
+    <h2>Styling with CSS</h2>
+    <p>So far we have added a header with a heading and a paragraph, both styled with a different font. Still it looks a little bland, let's add some color. You can change the background color by targeting the entire body element.</p>
+
+    <pre>
+        <code class="css">
+body {
+
+    background-color: lightblue;
+}
+
+h1, h2, h3 {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+}
+
+p {
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+        </code>
+    </pre>
+    <img id="stylecolor" src="stylecolor.png">
+    <p>Now let's give our paragraph a different background color, make sure you target your div with the class name paragraph instead of the paragraph itself. You can target a class by entering a dot first like this: .classname</p>
+
+    <pre>
+        <code class="css">
+body {
+
+    background-color: lightblue;
+}
+
+h1, h2, h3 {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+}
+
+p {
+    font-family: "Segoe UI",Arial,sans-serif;
+
+}
+.paragraph {
+    background-color: white;
+}
+        </code>
+    </pre>
+    <img id="paragraphbackground" src="paragraphbackground.png">
+    <p>The size of the div/background width will be spread over the entire page unless you set a custom width value in your css property. The height will be determined of how much content you add, you can also adjust it by adding a custom value in your css. <br><br> There are also functions like padding and margin. you can find more information about this on the <a href="css_properties.html">Useful CSS properties page</a></p>
+    <p>Let's give our paragraphs a fixed width size and some padding to make it look better. You can also round the corners by adjusting it's border-radius.</p>
+
+
+    <pre>
+        <code class="css">
+body {
+
+    background-color: lightblue;
+}
+
+h1, h2, h3 {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+}
+
+p {
+    font-family: "Segoe UI",Arial,sans-serif;
+
+}
+.paragraph {
+    background-color: white;
+
+    width: 800px;
+    padding: 0px 28px 10px 10px;
+    border-radius: 10px;
+}
+
+        </code>
+    </pre>
+    <img id="borderradius" src="borderradius.png">
+
+    
+    <p>Now let's add a logo to our header, give it an id like "logo" so you can style it in your css file.</p>
+
+    <pre>
+        <code class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Coding Journal&lt;/title&gt;
+        &lt;link href="style.css" type="text/css" rel="stylesheet"&gt;
+    &lt;/head&gt;   
+    &lt;body&gt;
+        &lt;header&gt;
+            &lt;h1&gt; My first web page &lt;img id=logo src="color-theory-logo.svg"&gt;&lt;/h1&gt;
+
+
+
+        &lt;/header&gt;
+        &lt;div class=paragraph&gt;
+            &lt;p&gt;this is our first paragraph, here we can add large chunks of text.&lt;/p&gt;
+        &lt;/div&gt;  
+    &lt;/body&gt;
+&lt;/html&gt;
+        </code>
+    </pre> 
+
+    <img id="screenshotlogo"src="screenshotlogo.png">
+
+    <p>Now you have added a logo, but the size seems to big, we can adjust it's size inside your css files</p>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="pagebuttons">
+    <a class="button" href="creating_css_file.html">Previous Page</a>
+    <a class="button" href="page_menu.html">Next Page</a>
+    </div>
+
+
+    </div>
+
+    <div class="navigation">
+        <ol>
+            <li><a class="navlink" href="index.html"> How to prepare your html code</a></li>
+            <li><a class="navlink" href="creating_css_file.html">Creating CSS file for styling</a></li>
+            <li><a class="currentpage" href=#>Styling with CSS</a></li>
+            <li><a class="navlink" href="page_menu.html">Adding a page menu to your website</a></li>  
+            <li><a class="navlink" href="navigation_menu.html">Adding a navigation menu to your website</a></li>  
+            <li><a class="navlink" href="change_cursor.html">Change cursor</a></li>
+        </ol>
+        <ul>
+            <li><a class="navlink" href="layout_tags.html">HTML layout tags</a></li>
+            <li><a class="navlink" href="css_selectors.html">CSS Selectors</a></li>
+            <li><a class="navlink" href="css_properties.html">Useful CSS properties</a></li>
+        </ul>
+    </div>
+
+      
+</body>    
+</html>
+
+

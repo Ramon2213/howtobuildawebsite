@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to build a website</title>
+</head>
+<body>
+    <header>
+        <h1> How to build a website</h1>
+        <img id=logo src="color-theory-logo.svg"/>
+    </header>
+    <div class='paragraph'>
+    <h2>How to change the cursor on your website</h2>
+    <p> To change the cursor on your website you will need to have a separate css file commonly named style.css. There you will have to apply the following code (The two parameters set the center of your cursor.) </p>
+
+    <pre>
+        <code class="css">
+cursor:url(file_name.png) 1 1, auto;  
+        </code>
+    </pre>
+
+
+    <p> Before you do so you need to decide where to apply it, this could be on the entire body of the website or when you hover over links or images. </p>
+    <br>
+    <p><strong> Entire body:</strong></p>
+    <pre>
+        <code class="css">
+body {
+    cursor:url(file_name.png) 1 1, auto;   
+}
+        </code>
+    </pre>
+    <p><strong> Hover over links:</strong></p>
+    <pre>
+        <code class="css">
+a:hover {
+    cursor:url(file_name.png) 1 1, auto;   
+}
+        </code>
+    </pre>
+
+    <p><strong>Hover over images:</strong></p>
+    <pre>
+        <code class="css">
+img:hover {
+    cursor:url(file_name.png) 1 1, auto;   
+}
+        </code>
+    </pre>
+    <br><br>
+    <p> By entering any of the codes above you should have your own custom cursor, if you encounter any problems make sure you have linked your html file to your css file inside of the head like so:</p>
+
+    <pre>
+        <code class="html">
+&lt;head&gt;
+    &lt;link href="style.css" type="text/css" rel="stylesheet"&gt;
+&lt;/head&gt;   
+        </code>
+    </pre>
+
+    <link href="style.css" type="text/css" rel="stylesheet">
+    
+    <br>
+
+
+ 
+    <div class="pagebuttons">
+        <a class="button" href="navigation_menu.html">Previous Page</a>
+        <a class="button" href="">Next Page</a>
+    </div>
+    
+
+    </div>
+
+    <div class="navigation">
+        <ol>
+            <li><a class="navlink" href="index.html"> How to prepare your html code</a></li>
+            <li><a class="navlink" href="creating_css_file.html">Creating CSS file for styling</a></li>
+            <li><a class="navlink" href="stylingcss.html">Styling with CSS</a></li>
+            <li><a class="navlink" href="page_menu.html">Adding a page menu to your website</a></li>  
+            <li><a class="navlink" href="navigation_menu.html">Adding a navigation menu to your website</a></li>  
+            <li><a class="currentpage" href=#>Change cursor</a></li>
+        </ol>
+        <ul>
+            <li><a class="navlink" href="layout_tags.html">HTML layout tags</a></li>
+            <li><a class="navlink" href="css_selectors.html">CSS Selectors</a></li>
+            <li><a class="navlink" href="css_properties.html">Useful CSS properties</a></li>
+        </ul>
+    </div>
+
+      
+</body>    
+</html>
+
+

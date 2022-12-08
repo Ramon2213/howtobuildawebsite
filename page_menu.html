@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to build a website</title>
+</head>
+<body>
+    <header>
+        <h1> How to build a website</h1>
+        <img id=logo src="color-theory-logo.svg"/>
+    </header>
+    <div class='paragraph'>
+    <h2>Adding a page menu to your website</h2>
+    <p>To add a page menu to your website you first need some buttons and then put them in a div. Make sure you put the right buttons on the right pages. (the first page should not have a working previous button.) You could but shouldn't use the button keyword. There are differences as to when a button should be used rather than a link. <strong><em id="smallerbold"> UX Movement wrote an article about this, and they came up with a simple rule: Buttons are used for actions that affect the website's front-end or back-end; links are used for navigation and actions that don't affect the website at all</em></strong></p>
+    <p><em class="red">Make sure you put the code inside of the body</em></p>
+    <pre>
+        <code class="html">
+&lt;div class ="pagebuttons"&gt;
+    &lt;a class="button" href="index.html"&gt;Previous Page&lt;/a&gt;
+    &lt;a class="button" href="page2.html"&gt;Next Page&lt;/a&gt;
+&lt;/div&gt;
+        </code>
+    </pre>
+    <img id="pagemenu" src="pagemenu.png" />
+    <br>
+    <br>
+
+    <p>Now create a .buttons ruleset in your css file so we can start styling. Add a solid border of 2 pixels with a color, also add a border-radius of 5 pixels to make the buttons more round. Next give the button text and button background a color. To make the buttons bigger you add some padding. Also change the font-family of the text on your button to your liking</p>
+    <pre>
+        <code class="css">
+.button {
+    border: 2px solid #466995;
+    border-radius: 5px;
+    color: #61bff9;
+    background-color: #466995;
+    padding:8px;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+        </code>
+    </pre>
+    <img id="pagemenustyled" src="pagemenustyled.png" /> 
+    <br><br><br>
+    <p>Now add some :active state styles for the button class, this is where you control what will happen when you activate (press) the button</p>
+    <pre>
+        <code class="css">
+.button {
+    border: 2px solid #466995;
+    border-radius: 5px;
+    color: #61bff9;
+    background-color: #466995;
+    padding:8px;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+.button:active {
+    background-color:#ffffff;
+    color: #3c91b2;
+}
+        </code>
+    </pre>
+
+    <p>Now to we will add a hover state so that it changes color when you hover over it</p>
+
+
+    <pre>
+        <code class="css">
+.button {
+    border: 2px solid #466995;
+    border-radius: 5px;
+    color: #61bff9;
+    background-color: #466995;
+    padding:8px;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+.button:active {
+    background-color:#ffffff;
+    color: #3c91b2;
+}
+.button:hover {
+  background-color: #C0D6DF;
+}
+        </code>
+    </pre>
+
+
+    <p>We can also add a 3d effect to your button by adding a shadow-box and making it disappear when you press it</p>
+
+
+    <pre>
+        <code class="css">
+.button {
+    border: 2px solid #466995;
+    border-radius: 5px;
+    color: #61bff9;
+    background-color: #466995;
+    padding:8px;
+    font-family: "Segoe UI",Arial,sans-serif;
+    
+    box-shadow: -3px 3px rgb(0, 0, 0), -2px 2px rgb(0, 0, 0), -1px 1px rgb(0, 0, 0);
+    margin: 10px 10px 10px 10px;
+}
+.button:active {
+    background-color:#ffffff;
+    color: #3c91b2;
+    
+    box-shadow: 0 0 0 rgb(0, 0, 0);
+    margin: 10px 18px 18px 10px;
+}
+.button:hover {
+  background-color: #C0D6DF;
+}
+        </code>
+    </pre>
+
+
+
+
+
+
+
+    <div class="pagebuttons">
+    <a class="button" href="stylingcss.html">Previous Page</a>
+    <a class="button" href="navigation_menu.html">Next Page</a>
+    </div>
+
+
+<br><br><br><br>
+
+    </div>
+
+
+    <div class="navigation">
+        <ol>
+            <li><a class="navlink" href="page_menu.html"> How to prepare your html code</a></li>
+            <li><a class="navlink" href="creating_css_file.html">Creating CSS file for styling</a></li>
+            <li><a class="navlink" href="stylingcss.html">Styling with CSS</a></li>
+            <li><a class="currentpage" href=#>Adding a page menu to your website</a></li>  
+            <li><a class="navlink" href="navigation_menu.html">Adding a navigation menu to your website</a></li>  
+            <li><a class="navlink" href="change_cursor.html">Change cursor</a></li>
+        </ol>
+        <ul>
+            <li><a class="navlink" href="layout_tags.html">HTML layout tags</a></li>
+            <li><a class="navlink" href="css_selectors.html">CSS Selectors</a></li>
+            <li><a class="navlink" href="css_properties.html">Useful CSS properties</a></li>
+        </ul>
+    </div>
+
+
+</body>    
+</html>
+
+

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to build a website</title>
+</head>
+<body>
+    <header>
+        <h1> How to build a website</h1>
+        <img id=logo src="color-theory-logo.svg"/>
+    </header>
+    <div class='paragraph'>
+    <h2>Adding a navigation menu to your website</h2>
+    <p>To add a navigation menu to your website you are going to have to make a list, put it inside a div to make it easier to place.<br> You can use an ordered list (<strong>&lt;ol&gt;</strong>) for numbered marks or an unordered list (<strong>&lt;ul&gt;</strong>) for  bullet marks (small black circles). I gave the current page you are on a different class so that we can style it to grey to make it easier to navigate, also we set the href to <strong>"#"</strong> so that when you click on it you get brought to the top of the page.</p>
+    <p><em class="red">Make sure you put the code inside of the body</em></p>
+    <pre>
+        <code class="html">
+&lt;div id="navigation"&gt;
+    &lt;ol&gt;
+        &lt;li&gt;&lt;a class="navlink" href="index.html"&gt;How to prepare your html code&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="navlink" href="creating_css_file.html"&gt;Creating CSS file for styling&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="navlink" href="page_menu.html"&gt;Creating CSS file for styling&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="currentpage" href="#"&gt;Adding a navigation menu to your website&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+
+    
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a class="navlink" href="layout_tags.html"&gt;HTML layout tags&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="navlink" href="css_selectors.html"&gt;CSS Selectors&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="navlink" href="css_properties.html"&gt;Usefull CSS properties&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+        </code>
+    </pre>
+ 
+<p>To style your navigation menu add the div id #navigation and link class .navlink to your css code. I have removed underline from all links (<strong>&lt;a&gt;</strong>) and added it on hover interaction.  I have also added current page to style it to grey to show which page you are on. </p>
+
+<pre>
+    <code class="css">
+
+#navigation{
+    position: absolute;
+    top: 85px; 
+    left: 1200px;  
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px 30px 10px 0px;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+.navlink:hover {
+    text-decoration: underline;
+    color:rgb(84, 201, 205)
+
+}
+
+.currentpage {
+    
+    color: rgba(128, 128, 128, 0.511);
+}
+
+a {
+    text-decoration: none;
+}
+    </code>
+</pre>
+
+<br><br><br><br>
+
+<p> If you want to make a navigation menu in breadcrumbs style here is an example.</p>
+
+
+    <pre>
+        <code class="html">
+&lt;div&gt;
+    &lt;ul class="breadcrumblist"&gt;
+        &lt;li&gt;&lt;a class="breadcrumb" href="shopping.html"&gt;Shopping&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="breadcrumb" href="fashion.html"&gt;Fashion&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="breadcrumb" href="shoes.html"&gt;Shoes&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="breadcrumb" href="flats.html"&gt;Flats&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="currentpage" href="#"&gt;Brown&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+        </code>
+    </pre>
+
+    <p>To make the list appear next to eachother you want to make the display inline, you can do this in your css file like this.</p>
+
+    
+    <pre>
+        <code class="css">
+    
+.breadcrumblist > li {
+  display: inline;
+
+}
+        </code>
+    </pre>
+
+    <p> Usually Breadcrumb navigations are separated with a "&gt;" sign. Instead of having to manually add this to all of the breadcrumbs in our breadcrumb trail, we can use a CSS pseudo-element. A CSS pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element(s). For example, ::first-line can be used to change the font of the first line of a paragraph. <br>.breadcrumb li+li::before is the selector that we want!<br><br></p>
+        
+    <ul>
+        <li>The <strong>+</strong> is called the adjacent sibling combinator; it will only select two li‘s when they are immediately next to each other, with the same parent. The element that actually gets selected is the second element of this sibling pair.</li>
+        <li> The <strong>::before</strong> part of this selector creates a pseudo-element. The <strong>::before</strong> pseudo-element is often used with the content property, to add content that will be displayed just before the selected element.</li>
+    </ul>
+    <p>The content property decides what will be added between the list objects and the padding creates some space.</p>
+    
+
+    <pre>
+        <code class="css">
+    
+.breadcrumblist > li {
+  display: inline;
+
+}
+
+.breadcrumblist li+li::before {
+	padding: 10px;
+    content: ">";
+}
+
+
+.breadcrumblist a {
+	text-decoration: none;
+}
+
+        </code>
+    </pre>
+
+    <p>Another feature of breadcrumbs is that the links often don't have an underline, I have this removed in the code above aswel by setting <strong>text-decoration</strong> to <strong>none</strong>.</p>
+    <br>
+    <div>
+        <ul class="breadcrumblist">
+            <li><a class="breadcrumb" >Shopping</a></li>
+            <li><a class="breadcrumb" >Fashion</a></li>
+            <li><a class="breadcrumb" >Shoes</a></li>
+            <li><a class="breadcrumb" >Flats</a></li>
+            <li><a class="currentpage">Brown</li></a>
+        </ul>
+    </div>
+    <br><br>
+    <p> To finish it off you can make it more interactive by adding a hover selector</p>
+    
+    <pre>
+        <code class="css">
+    
+.breadcrumblist > li {
+  display: inline;
+
+}
+
+.breadcrumblist li+li::before {
+	padding: 10px;
+    content: ">";
+}
+
+
+.breadcrumblist a {
+	text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: red;
+}
+
+        </code>
+    </pre>
+
+    <div>
+        <ul class="breadcrumblistred">
+            <li><a class="breadcrumb" >Shopping</a></li>
+            <li><a class="breadcrumb" >Fashion</a></li>
+            <li><a class="breadcrumb" >Shoes</a></li>
+            <li><a class="breadcrumb" >Flats</a></li>
+            <li><a class="currentpage">Brown</a></li>
+        </ul>
+    </div>
+    
+    <br><br><br>
+    <p>
+        If you want to mix attributes and locations in your breadcrumb you will have to seperate your list elements with classes.
+    </p>
+
+
+
+    <pre>
+        <code class="html">
+&lt;div&gt;
+    &lt;ul class="breadcrumbmix"&gt;
+        &lt;li&gt;&lt;a class="location" href="#"&gt;Shop&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="location" href="#"&gt;Groceries&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="location" href="#"&gt;Blueberries&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="attribute" href="#"&gt;Organic&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+        </code>
+    </pre>
+
+
+
+    <p>Now you want to style in css. Usually you want attributes removable, you can make this more clear by making the "li.attribute a" grey and also by adding a red closing sign (x). To do so you need to add a "content: x;" property to .breadcrumbmix li.attribute::after.
+        <br><br> li.attribute::after adds cosmetic content to an element, it is inline by default.
+    </p>
+
+
+    <pre>
+        <code class="css">
+    
+.breadcrumbmix a {
+    text-decoration: none;
+}
+
+.breadcrumbmix li{
+display: inline;
+
+}
+
+.breadcrumbmix li.location+li.location::before {
+  content: "> ";
+}
+
+.breadcrumbmix li.attribute::after {
+  content: "x";
+  color: red;
+  font-size: 10px;
+  vertical-align: super;
+}
+.breadcrumbmix li.attribute a{
+  color:gray;
+}
+
+.breadcrumbmix li.location a{
+    color:black;
+  }
+
+.breadcrumbmix a:hover {
+  color: red;
+}
+
+
+        </code>
+    </pre>
+
+    <p>This is the result:</p>
+
+    <div>
+        <ul class="breadcrumbmix">
+          <li class="location"><a  href="#">Shop</a></li>
+          <li class="location"><a  href="#">Groceries</a></li>
+          <li class="location"><a  href="#">Blueberries</a></li>
+          <li class="attribute"><a  href="#">Organic</a></li>
+        </ul>
+    </div>
+
+    <br><br><br>
+        
+
+
+    <div class="pagebuttons">
+    <a class="button" href="page_menu.html">Previous Page</a>
+    <a class="button" href="change_cursor.html">Next Page</a>
+    </div>
+
+
+<br><br><br><br>
+
+    </div>
+
+
+    <div class="navigation">
+        <ol>
+            <li><a class="navlink" href="index.html"> How to prepare your html code</a></li>
+            <li><a class="navlink" href="creating_css_file.html">Creating CSS file for styling</a></li>
+            <li><a class="navlink" href="stylingcss.html">Styling with CSS</a></li>
+            <li><a class="navlink" href="page_menu.html">Adding a page menu to your website</a></li>  
+            <li><a class="currentpage" href=#>Adding a navigation menu to your website</a></li>  
+            <li><a class="navlink" href="change_cursor.html">Change cursor</a></li>
+        </ol>
+        <ul>
+            <li><a class="navlink" href="layout_tags.html">HTML layout tags</a></li>
+            <li><a class="navlink" href="css_selectors.html">CSS Selectors</a></li>
+            <li><a class="navlink" href="css_properties.html">Useful CSS properties</a></li>
+        </ul>
+    </div>
+
+
+</body>    
+</html>
+
+

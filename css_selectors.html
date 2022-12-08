@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to build a website</title>
+</head>
+<body>
+    <header>
+        <h1> How to build a website</h1>
+        <img id=logo src="color-theory-logo.svg"/>
+    </header>
+    <div class='paragraph'>
+    <h2>CSS Selectors</h2>
+    <p>
+    <br>
+
+    <table>
+        <thead>
+            <tr id="thead">
+                <td><strong>Selector</strong></td>
+                <td><strong>Example</strong></td>
+                <td><strong>Description</strong></td>
+            </tr>
+
+            <tbody>
+                <tr>
+                    <td>.class</td>
+
+                    <td>.intro {<br><br>}
+                    </td>
+                    <td>Selects all elements with class="intro"</td>
+
+                    
+                </tr>  
+
+                 <tr>
+                    <td>.class1.class2</td>
+
+                    <td>.name1.name2 {<br><br>}</td>
+                    <td>Selects all elements with both name1 and name2 set 
+                        within its class attribute <em class="smalltext">(matches element that has both classes.)</em></td>
+                </tr>
+
+                <tr>
+                    <td>.class1 .class2</td>
+                    <td>.name1 .name2 {<br><br>}</td>
+                    <td>Selects all elements with name2 that is a descendant of
+                        an element with name1 <em class="smalltext">(matches element with class2 inside element with class1.)</em></td>
+                </tr>
+
+                <tr>
+                    <td>#id</td>
+                    <td>#firstname {<br><br>}</td>
+                    <td>Selects the element with id="firstname"</td>
+                </tr>
+
+                <tr>
+                    <td>*</td> 
+                    <td>* {<br><br>}</td>
+                    <td>Selects all elements</td>
+                </tr>
+
+                <tr>
+                    <td>p</td>
+                    <td>p {<br><br>}</td>
+                    <td>Selects all paragraph elements</td>
+                </tr>
+
+                <tr>
+                    <td>a</td>
+                    <td>a {<br><br>}</td>
+                    <td>Selects all link elements (which are blue and underlined by default)</td>
+                </tr>
+
+
+                <tr>
+                    <td>body</td>
+                    <td>body {<br><br>}</td>
+                    <td>Selects the body element</td>
+                </tr>
+
+                <tr>
+                    <td>h1, h2, h3</td>
+                    <td>h1, h2, h3 {<br><br>}</td>
+                    <td>Selects heading element 1, 2 and 3</td>
+                </tr>
+
+                <tr>
+                    <td>table</td>
+                    <td>table {<br><br>}</td>
+                    <td>Selects all table elements</td>
+                </tr>
+
+                <tr>
+                    <td>td thead tbody</td>
+                    <td>tbody thead td {<br><br>}</td>
+                    <td>Selects all table data, table head and table bodies</td>
+                </tr>
+
+                <tr>
+                    <td>code</td>
+                    <td>code {<br><br>}</td>
+                    <td>Selects all code elements</td>
+                </tr>
+                <tr>
+                    <td>:link</td>
+                    <td>a:link {<br><br>}</td>
+                    <td>Selects all unvisited links</td>
+                </tr>
+
+                <tr>
+                    <td>:visited</td>
+                    <td>a:visited {<br><br>}</td>
+                    <td>Selects all visited links</td>
+
+                <tr>
+                    <td>:hover</td>
+                    <td>a:hover {<br><br>}</td>
+                    <td>Selects action when you hover over a link</td>
+                </tr>
+                <tr>
+                    <td>:active</td>
+                    <td>a:active {<br><br>}</td>
+                    <td>Selects activated links, a link gets activated when you click on it.<em class="smalltext"> For example you can add a background color when you click on it by adding background-color: yellow; <em class="smalltext"></em></td>
+                </tr>
+                <tr>
+                    <td>::after</td>
+                    <td>li.attribute::after {<br><br>}</td>
+                    <td>li.attribute::after adds cosmetic content after an element, it is inline by default.<em class="smalltext">For example you can add a small cross to an attribute (content: "x";) to make it clear it is removable.<em class="smalltext"></em></td>
+                </tr>
+                <tr>
+                    <td>::before</td>
+                    <td>.breadcrumblist li+li::before{<br><br>}</td>
+                    <td>::before adds cosmetic content before the element, it is inline by default.<em class="smalltext">In case of .breadcrumblist li+li::before, you can add property content: ">"; to add content in between list objects.<em class="smalltext"></em></td>
+                </tr>
+
+                
+
+
+
+                <tr>
+                    <td>::first-letter</td>
+                    <td>p::first-letter {<br><br>}</td>
+                    <td>Selects the first letter of every <p> element</td>
+                </tr>
+
+                <tr>
+                    <td>::first-line</td>
+                    <td>p::first-line {<br><br>}</td>
+                    <td>Selects the first line of every paragraph element</td>
+                </tr>
+
+
+
+
+
+                </tr>
+            </tbody>
+        </thead>
+    </table>    
+    </div>
+
+    
+    <div class="navigation">
+        <ol>
+            <li><a class="navlink" href="index.html"> How to prepare your html code</a></li>
+            <li><a class="navlink" href="creating_css_file.html">Creating CSS file for styling</a></li>
+            <li><a class="navlink" href="stylingcss.html">Styling with CSS</a></li>
+            <li><a class="navlink" href="page_menu.html">Adding a page menu to your website</a></li>  
+            <li><a class="navlink" href="navigation_menu.html">Adding a navigation menu to your website</a></li>  
+            <li><a class="navlink" href="change_cursor.html">Change cursor</a></li>
+        </ol>
+        <ul>
+            <li><a class="navlink" href="layout_tags.html">HTML layout tags</a></li>
+            <li><a class="currentpage" href=#>CSS Selectors</a></li>
+            <li><a class="navlink" href="css_properties.html">Useful CSS properties</a></li>
+        </ul>
+    </div>
+
+
+      
+</body>    
+</html>
+
+

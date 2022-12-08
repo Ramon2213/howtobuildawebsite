@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to build a website</title>
+</head>
+<body>
+    <header>
+        <h1> How to build a website</h1>
+        <img id=logo src="color-theory-logo.svg"/>
+    </header>
+    <div id="container">
+    <div class='paragraph'>
+    <h2>Creating a css file for styling</h2>
+    <p>If you want to style your html code this is best done with a separate CSS file commonly named style.css. When you have created this make sure you link your html files to your new css file by putting the following code inside of the head:</p>
+    <p>&lt;link href="style.css" type="text/css" rel="stylesheet"&gt;</p>
+
+
+    <pre>
+        <code class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Coding Journal&lt;/title&gt;
+        &lt;link href="style.css" type="text/css" rel="stylesheet"&gt;
+    &lt;/head&gt;   
+    &lt;body&gt;
+        &lt;header&gt;
+            &lt;h1&gt; My first web page &lt;/h1&gt;
+        &lt;/header&gt;
+        &lt;div class=paragraph&gt;
+            &lt;p&gt;this is our first paragraph, here we can add large chunks of text.&lt;/p&gt;
+        &lt;/div&gt;  
+    &lt;/body&gt;
+&lt;/html&gt;
+        </code>
+    </pre> 
+
+    <p> Now you can start styling! <br><br> To start you have to call a selector following with an opening curly bracket, in the next row you insert a tab following with the property. Add a colon and a space and enter the value of the property you want to change. When you are done close with a curly bracket</p>
+    <img id="styling" src="styling.png">
+    <p>Now let's add this to our code:</p>
+    <pre>
+        <code class="css">
+h1, h2, h3 {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+}
+        </code>
+    </pre>
+
+    <p> This will change all your headings font and also it's thickness, now we are going to style our paragraphs to match with our headings.</p>
+
+    <pre>
+        <code class="css">
+h1, h2, h3 {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+}
+
+p {
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+        </code>
+    </pre>
+
+    <img id="comparestyle" src="comparestyle.png">
+
+
+    <div class="pagebuttons">
+    <a class="button" href="index.html">Previous Page</a>
+    <a class="button" href="stylingcss.html">Next Page</a>
+    </div>
+
+
+    </div>
+
+    <div class="navigation">
+        <ol>
+            <li><a class="navlink" href="index.html"> How to prepare your html code</a></li>
+            <li><a class="currentpage" href=#>Creating CSS file for styling</a></li>
+            <li><a class="navlink" href="stylingcss.html">Styling with CSS</a></li>
+            <li><a class="navlink" href="page_menu.html">Adding a page menu to your website</a></li>  
+            <li><a class="navlink" href="navigation_menu.html">Adding a navigation menu to your website</a></li>  
+            <li><a class="navlink" href="change_cursor.html">Change cursor</a></li>
+        </ol>
+        <ul>
+            <li><a class="navlink" href="layout_tags.html">HTML layout tags</a></li>
+            <li><a class="navlink" href="css_selectors.html">CSS Selectors</a></li>
+            <li><a class="navlink" href="css_properties.html">Useful CSS properties</a></li>
+        </ul>
+    </div>
+    </div>
+
+      
+</body>    
+</html>
+
+

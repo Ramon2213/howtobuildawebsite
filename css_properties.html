@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to build a website</title>
+</head>
+<body>
+    <header>
+        <h1> How to build a website</h1>
+        <img id=logo src="color-theory-logo.svg"/>
+    </header>
+    <div class='paragraph'>
+    <h2>Usefull CSS properties for various CSS selectors</h2>
+    <p>We've covered a few useful properties for some populair selectors:</p>
+
+    <p>Text based properties (paragraphs,headings):</p>
+    <pre>
+        <code class="css">
+p {
+    height: 300px;                            <span class="red">- enlarges the paragraph area to 300px in length</span>
+    width: 300px;                            <span class="red">- enlarges the paragraph area to 300px in width</span>
+    color: black;                             <span class="red">- sets the color of the text to black</span> 
+    font-family: "Segoe UI",Arial,sans-serif; <span class="red">- sets the font family to Segoe UI, if the browser does not recognize it it will set it to Arial. 
+                                                                                                          serif and sans-serif are keyword values that can be added as a final fallback font if nothing else in the font stack is available.</span>
+
+    font-weight: 450;                         <span class="red">- sets the thickness of the text to 450, keyword bold can also be used</span>
+    font-size: 13px;                          <span class="red">- sets the text size to 13px</span>
+    border: 1px solid black;                  <span class="red">- creates a black border around the paragraph area of 1 pixel size</span>
+    border-radius: 10px;                      <span class="red">- cuts the corner around the border to make it more round</span>
+    background-image: url("../img/image.jpg");<span class="red">- creates a background from a picture</span>
+    background-color: black;                  <span class="red">- adds a black background behind your text, if you want to fill an entire block you can put your paragraph in a div and style the background of your div</span>
+    text-decoration: underline;               <span class="red">- adds a line under your text</span>
+    text-align: left;                         <span class="red">- aligns your text to the left</span>
+    text-transform: uppercase;                <span class="red">- transforms your text to be fully uppercase</span>
+    opacity: 0.5;                             <span class="red">- makes your text more transparent</span>
+}
+        </code>
+    </pre>
+
+    <p>Link based properties:</p>
+    <pre>
+        <code class="css">
+a {
+
+    color: #466995;                           <span class="red">- changes color to blue, suited for website links</span>
+    text-decoration: underline;               <span class="red">- adds a line under your links to make them stand out more, usually this is the standard already, to remove the line enter "none"</span>
+    cursor: pointer;                          <span class="red">- turns your cursor into a pointer when you hover over a link. Luckily, this behavior is generally included in browser user agent stylesheets,
+                                                                                                     and it also exists in the HTML5 default styles.</span>       
+}
+        </code>
+    </pre>
+
+
+    <p>Link hover properties:</p>
+    <pre>
+        <code class="css">
+a:hover {
+ 
+    text-decoration: underline;               <span class="red">- adds a line under your links when you hover over them, to remove the line enter "none"</span>
+    cursor:url(custompointer.png) 1 1, auto;  <span class="red">- changes your cursor to a custom image when you hover over links</span>
+    opacity: 50%;                             <span class="red">- fades your links into transparenty of 50% when you hover over it</span>
+        </code>
+    </pre>
+
+    <p>Image properties:</p>
+    <pre>
+        <code class="css">
+#imgid {
+
+    height: 300px;                            <span class="red">- resizes the image to 300px in length</span>
+    width: 300px;                            <span class="red">- resizes the image area to 300px in width</span>
+
+    border-radius: 10px;                      <span class="red">- cuts the corner around the border to make it more round. 
+                                                                                                     you can create a border that is a perfect circle by first creating an element with the same width and height, 
+                                                                                                     and then setting the radius equal to half the width of the box, which is 50%.</span>
+
+    object-fit: cover;                        <span class="red">- crops the image to fit, prevents resizing of the image</span>                                                                                               
+
+    border: 1px solid black;                  <span class="red">- creates a black border around the image area of 1 pixel size</span>    
+    opacity: 0.5;                             <span class="red">- makes your image more transparent</span>     
+    position:absolute;                        <span class="red">- all other elements on the page will ignore the element and act like it is not present on the page.
+                                                                                                     the element will be positioned relative to its closest positioned parent element, while offset properties can be used to 
+                                                                                                     determine the final position from there.</span>
+
+    top: 100px;                               <span class="red">- places your image 100px away from the top</span>
+    left: 10px;                               <span class="red">- places your image 10px away from the left</span>                                                                          
+}
+        </code>
+    </pre>
+
+  
+
+    <p>Img hover properties</p>
+    <pre>
+        <code class="css">
+img:hover {
+    transform: scaleX(-1);                           <span class="red">- flips an image when you hover over it</span>
+    cursor:url(custompointer.png) 1 1, auto;         <span class="red">- changes your cursor to a custom image when you hover over it</span>
+    opacity: 50%;                                    <span class="red">- fades your image into transparenty of 50% when you hover over it</span>
+}
+        </code>
+    </pre>
+
+
+
+
+
+
+    <p>The box model:</p>
+
+
+    <img id="boxmodel" src="boxmodel.png" />
+
+
+
+
+    <pre>
+        <code class="css">
+#elementid {
+
+    height: 80px;                      <span class="red">- the height of your element is set to 80px </span>
+    width: 240px;                      <span class="red">- the width of your element is set to 240px 
+                                                                                      when the width and height of an element are set in pixels, it will be the same size on all devices. an element that fills a laptop screen will overflow a mobile screen.</span>
+
+    border: 3px solid red;             <span class="red">- a border is a line that surrounds an element, like a frame around a painting. This can be dotted, dashed solid and double.</span>
+    padding: 6px 11px 4px 9px;         <span class="red">- adds padding to your content, doing it this way it adds 6px to the top 11px to the right 4px to the bottom and 9px to the left</span>
+    margin: 20px;                      <span class="red">- will place 20 pixels of space on the outside of the element's box on all four sides. 
+                                                                                      This means that other HTML elements on the page cannot come within 20 pixels of the elements border.</span>
+    </span>                                                         
+}
+        </code>
+    </pre>
+
+    </div>
+    
+    <div class="navigation">
+        <ol>
+            <li><a class="navlink" href="index.html"> How to prepare your html code</a></li>
+            <li><a class="navlink" href="creating_css_file.html">Creating CSS file for styling</a></li>
+            <li><a class="navlink" href="stylingcss.html">Styling with CSS</a></li>
+            <li><a class="navlink" href="page_menu.html">Adding a page menu to your website</a></li>  
+            <li><a class="navlink" href="navigation_menu.html">Adding a navigation menu to your website</a></li>  
+            <li><a class="navlink" href="change_cursor.html">Change cursor</a></li>
+        </ol>
+        <ul>
+            <li><a class="navlink" href="layout_tags.html">HTML layout tags</a></li>
+            <li><a class="navlink" href="css_selectors.html">CSS Selectors</a></li>
+            <li><a class="currentpage" href=#>Useful CSS properties</a></li>
+        </ul>
+    </div>
+
+
+      
+</body>    
+</html>
+
+
